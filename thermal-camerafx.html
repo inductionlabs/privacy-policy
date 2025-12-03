@@ -11,7 +11,7 @@
             line-height: 1.6;
             margin: 0;
             padding: 20px;
-            background-color: #f4f7f6; /* Light, neutral background */
+            background-color: #f4f7f6;
             color: #333;
         }
 
@@ -27,7 +27,7 @@
 
         /* Headings */
         h1 {
-            color: #007bff; /* Primary blue for prominence */
+            color: #007bff;
             border-bottom: 2px solid #e0e0e0;
             padding-bottom: 10px;
             margin-bottom: 20px;
@@ -41,31 +41,51 @@
             padding-left: 10px;
         }
 
-        /* Paragraphs and Links */
-        p {
-            margin-bottom: 15px;
+        /* Permissions Table Styling */
+        .permissions-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .permissions-table th, .permissions-table td {
+            padding: 12px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        .permissions-table th {
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
             font-size: 1.05em;
         }
 
-        a {
-            color: #007bff;
-            text-decoration: none;
+        .permissions-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .category-header {
+            background-color: #eef7ff !important;
+            color: #0056b3;
+            font-weight: bold;
+            text-align: center !important;
+        }
+        
+        .perm-name {
             font-weight: bold;
         }
 
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* Permissions List (Key Information) */
-        .permissions-list, .data-list {
+        /* Other elements (Data Lists, Notes, Links) remain the same */
+        .data-list {
             list-style: none;
             padding: 0;
             margin-bottom: 20px;
         }
 
-        .permissions-list li, .data-list li {
-            background: #eef7ff; /* Light blue background for emphasis */
+        .data-list li {
+            background: #eef7ff;
             margin-bottom: 10px;
             padding: 15px;
             border-radius: 8px;
@@ -78,15 +98,20 @@
             margin-bottom: 5px;
             color: #0056b3;
         }
-
-        /* Important Note/Contact Section */
+        
         .important-note {
-            background-color: #fff3cd; /* Light warning color */
-            border-left: 5px solid #ffc107; /* Warning border */
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
             padding: 15px;
             margin-top: 30px;
             border-radius: 8px;
             font-size: 1.1em;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -96,14 +121,9 @@
     <h1>Privacy Policy for Thermal Camera Fx</h1>
     
     <p>
-        This is the privacy policy for the **Thermal Camera Fx** application.
-        When we refer to "personal data" in this policy, we mean any data that may identify you as an individual.
+        This is the privacy policy for the **Thermal Camera Fx** mobile application. When we refer to "personal data," we mean any data that may identify you as an individual.
     </p>
     
-    <p>
-        Protecting your privacy and maintaining your trust is core to our mission at Ilabs.
-    </p>
-
     <h2>1. Data Collection & Use 🛑 We DO NOT Collect Personal Information</h2>
     
     <p>
@@ -117,74 +137,13 @@
     <h2>2. App Performance & Metrics (Non-Personal Data)</h2>
 
     <p>
-        Our app collects non-personal data necessary for maintaining and improving the app's quality and stability. This data includes:
+        Our app collects non-personal data necessary for maintaining and improving the app's quality and stability:
     </p>
     
     <ul class="data-list">
-        <li><span class="permission-name">App Performance & Crashes:</span> Data regarding app stability, errors, and crashes, which helps us fix bugs and improve user experience.</li>
-        <li><span class="permission-name">In-App Purchases / Unlocks:</span> Key metrics regarding purchases. This data is stored on Google's secure servers for billing and transaction validation purposes and cannot be deleted by us.</li>
+        <li><span class="permission-name">App Performance & Crashes:</span> Data regarding app stability, errors, and crashes.</li>
+        <li><span class="permission-name">In-App Purchases / Unlocks:</span> Key metrics regarding purchases, stored on the respective App Store's secure servers for billing.</li>
     </ul>
 
     <p>
-        Data regarding app performance (excluding in-app purchase data) is **automatically deleted after 180 days**.
-    </p>
-
-    <h2>3. Advertising (AdMob)</h2>
-    <p>
-        This application uses the **Google AdMob** service to display advertisements. AdMob may collect certain non-personal data to provide relevant and personalized ads. For more information on how Google uses data, please see Google's privacy policy.
-    </p>
-    <p>
-        The following network permissions are strictly used to facilitate advertisements:
-    </p>
-    <ul class="permissions-list">
-        <li><span class="permission-name">android.permission.ACCESS_NETWORK_STATE</span></li>
-        <li><span class="permission-name">android.permission.INTERNET</span></li>
-    </ul>
-
-    <h2>4. App Permissions Explained</h2>
-    <p>
-        The following permissions are required by the app to function as intended:
-    </p>
-    
-    <ul class="permissions-list">
-        <li>
-            <span class="permission-name">android.permission.CAMERA</span> 
-            - For taking photos and videos with the thermal effect.
-        </li>
-        <li>
-            <span class="permission-name">android.permission.RECORD_AUDIO</span> 
-            - For recording audio when capturing a video.
-        </li>
-        <li>
-            <span class="permission-name">android.permission.READ_EXTERNAL_STORAGE</span> 
-            - To display existing photos and videos in the built-in gallery.
-        </li>
-        <li>
-            <span class="permission-name">android.permission.WRITE_EXTERNAL_STORAGE</span> 
-            - To save new photos and videos captured by the app.
-        </li>
-        <li>
-            <span class="permission-name">android.permission.WAKE_LOCK</span> 
-            - To prevent the device from sleeping while recording videos.
-        </li>
-        <li>
-            <span class="permission-name">com.android.vending.BILLING</span> 
-            - For processing secure in-app purchase upgrades through the Google Play Store.
-        </li>
-    </ul>
-
-    <h2>5. Contact Us & Data Deletion</h2>
-    
-    <div class="important-note">
-        <p>
-            If you have any other queries, or wish to request the deletion of any collected non-personal app performance data sooner than the 180-day retention period, please contact us directly:
-        </p>
-        <p>
-            <strong>Email:</strong> <a href="mailto:inductionlabs1@gmail.com">inductionlabs1@gmail.com</a>
-        </p>
-    </div>
-
-</div>
-
-</body>
-</html>
+        App performance data (excluding in-app purchase data) is **automatically deleted after 18
