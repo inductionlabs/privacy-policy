@@ -3,147 +3,340 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Thermal Camera Fx</title>
+    <title>Privacy Policy - Thermal Camera FX</title>
     <style>
-        /* General Styling for Mobile-First Approach */
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #0ea5e9;
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --border: #334155;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --gradient: linear-gradient(135deg, #6366f1 0%, #0ea5e9 100%);
+        }
+
+        * {
             margin: 0;
-            padding: 20px;
-            background-color: #f4f7f6;
-            color: #333;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        /* Container for readability */
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.7;
         }
 
-        /* Headings */
-        h1 {
-            color: #007bff;
-            border-bottom: 2px solid #e0e0e0;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
+        .header {
+            background: var(--gradient);
+            padding: 50px 20px;
             text-align: center;
         }
 
-        h2 {
-            color: #333;
-            margin-top: 30px;
-            border-left: 4px solid #007bff;
-            padding-left: 10px;
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
         }
 
-        /* Permissions Table Styling */
+        .header p {
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 24px;
+            border: 1px solid var(--border);
+        }
+
+        .card h2 {
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card p, .card li {
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card ul li {
+            padding: 12px 16px;
+            background: var(--bg-dark);
+            border-radius: 8px;
+            margin-bottom: 8px;
+            border-left: 3px solid var(--primary);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0.05));
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .highlight-box.warning {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(245, 158, 11, 0.05));
+            border-color: rgba(245, 158, 11, 0.3);
+        }
+
         .permissions-table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 15px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            margin-top: 16px;
         }
 
-        .permissions-table th, .permissions-table td {
-            padding: 12px;
-            border: 1px solid #e0e0e0;
+        .permissions-table th,
+        .permissions-table td {
+            padding: 14px 16px;
             text-align: left;
+            border-bottom: 1px solid var(--border);
         }
 
         .permissions-table th {
-            background-color: #007bff;
+            background: var(--bg-dark);
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .permissions-table td {
+            color: var(--text-secondary);
+        }
+
+        .permissions-table tr:hover td {
+            background: rgba(99, 102, 241, 0.05);
+        }
+
+        .contact-section {
+            background: var(--gradient);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .contact-section h2 {
             color: white;
-            font-weight: bold;
-            font-size: 1.05em;
-        }
-
-        .permissions-table tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        
-        .category-header {
-            background-color: #eef7ff !important;
-            color: #0056b3;
-            font-weight: bold;
-            text-align: center !important;
-        }
-        
-        .perm-name {
-            font-weight: bold;
-        }
-
-        /* Other elements (Data Lists, Notes, Links) remain the same */
-        .data-list {
-            list-style: none;
-            padding: 0;
             margin-bottom: 20px;
         }
 
-        .data-list li {
-            background: #eef7ff;
-            margin-bottom: 10px;
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 5px solid #007bff;
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 20px;
         }
 
-        .permission-name {
-            font-weight: bold;
-            display: block;
-            margin-bottom: 5px;
-            color: #0056b3;
-        }
-        
-        .important-note {
-            background-color: #fff3cd;
-            border-left: 5px solid #ffc107;
-            padding: 15px;
-            margin-top: 30px;
-            border-radius: 8px;
-            font-size: 1.1em;
+        .contact-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 16px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
         }
 
-        a {
-            color: #007bff;
+        .contact-item h4 {
+            font-size: 0.9rem;
+            margin-bottom: 6px;
+            opacity: 0.9;
+        }
+
+        .contact-item a {
+            color: white;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 500;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border);
+            margin-top: 40px;
+        }
+
+        .footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .footer .authors {
+            margin-top: 8px;
+            font-size: 0.85rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-bottom: 20px;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--primary);
+        }
+
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+            
+            .permissions-table th,
+            .permissions-table td {
+                padding: 10px 12px;
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
 <body>
 
+<header class="header">
+    <h1>🔥 Thermal Camera FX</h1>
+    <p>Privacy Policy</p>
+</header>
+
 <div class="container">
-    <h1>Privacy Policy for Thermal Camera Fx</h1>
-    
-    <p>
-        This is the privacy policy for the **Thermal Camera Fx** mobile application. When we refer to "personal data," we mean any data that may identify you as an individual.
-    </p>
-    
-    <h2>1. Data Collection & Use 🛑 We DO NOT Collect Personal Information</h2>
-    
-    <p>
-        We are committed to respecting your privacy.
-    </p>
-    <ul>
-        <li>We **do not** collect or store any personal information that can directly identify you (e.g., names, passwords, or login information).</li>
-        <li>We **do not** sell your personal data to third parties.</li>
-    </ul>
+    <a href="index.html" class="back-link">← Back to All Apps</a>
 
-    <h2>2. App Performance & Metrics (Non-Personal Data)</h2>
+    <div class="card">
+        <h2>🛡️ Our Commitment to Privacy</h2>
+        <p>This privacy policy explains how Thermal Camera FX handles your data. When we refer to "personal data," we mean any data that may identify you as an individual.</p>
+        
+        <div class="highlight-box">
+            <strong>🔒 We DO NOT collect personal information</strong>
+            <p style="margin-top: 8px; margin-bottom: 0;">We are committed to respecting your privacy. We do not collect, store, or sell any personal information that can directly identify you.</p>
+        </div>
+        <p style="margin-top: 16px;"><a href="thermal-camerafx_tos.html" style="color: var(--secondary); text-decoration: none; font-weight: 500;">📋 View Terms of Service →</a></p>
+    </div>
 
-    <p>
-        Our app collects non-personal data necessary for maintaining and improving the app's quality and stability:
-    </p>
-    
-    <ul class="data-list">
-        <li><span class="permission-name">App Performance & Crashes:</span> Data regarding app stability, errors, and crashes.</li>
-        <li><span class="permission-name">In-App Purchases / Unlocks:</span> Key metrics regarding purchases, stored on the respective App Store's secure servers for billing.</li>
-    </ul>
+    <div class="card">
+        <h2>📊 Data Collection & Use</h2>
+        <ul>
+            <li><strong>No Personal Data:</strong> We do not collect names, passwords, email addresses, or any login information.</li>
+            <li><strong>No Data Sales:</strong> We never sell your personal data to third parties.</li>
+            <li><strong>App Performance:</strong> We collect anonymous crash reports and performance metrics to improve app stability.</li>
+            <li><strong>In-App Purchases:</strong> Purchase data is securely stored on platform servers (not by us) for billing purposes.</li>
+        </ul>
+    </div>
 
-    <p>
-        App performance data (excluding in-app purchase data) is **automatically deleted after 18
+    <div class="card">
+        <h2>🔐 Permissions We Use</h2>
+        <p>Our app may request certain permissions to provide its core functionality:</p>
+        
+        <table class="permissions-table">
+            <tr>
+                <th>Permission</th>
+                <th>Purpose</th>
+            </tr>
+            <tr>
+                <td>Camera</td>
+                <td>Required for capturing photos and videos with thermal effects</td>
+            </tr>
+            <tr>
+                <td>Microphone</td>
+                <td>For recording audio in videos</td>
+            </tr>
+            <tr>
+                <td>Storage</td>
+                <td>To save photos/videos and access your gallery</td>
+            </tr>
+            <tr>
+                <td>Internet</td>
+                <td>For displaying advertisements and checking for updates</td>
+            </tr>
+            <tr>
+                <td>Wake Lock</td>
+                <td>Prevents device from sleeping during video recording</td>
+            </tr>
+            <tr>
+                <td>Billing</td>
+                <td>For processing in-app purchases</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>🗑️ Data Retention</h2>
+        <p>Performance and crash data is automatically deleted after <strong>180 days</strong>. In-app purchase records are maintained by platform providers as required for billing.</p>
+        
+        <div class="highlight-box warning">
+            <strong>🗂️ Request Data Deletion</strong>
+            <p style="margin-top: 8px; margin-bottom: 0;">You can request deletion of your data at any time by contacting us at <a href="mailto:inductionlabs1@gmail.com" style="color: var(--warning);">inductionlabs1@gmail.com</a></p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>🔄 Third-Party Services</h2>
+        <p>Our app may use third-party services that have their own privacy policies:</p>
+        <ul>
+            <li><strong>AdMob:</strong> For displaying advertisements</li>
+            <li><strong>App Store Services:</strong> For app distribution and in-app purchases</li>
+            <li><strong>Analytics:</strong> For anonymous usage statistics</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>📝 Policy Updates</h2>
+        <p>We may update this Privacy Policy from time to time. Changes will be posted on this page and are effective immediately upon posting. We encourage you to review this page periodically.</p>
+        <p><strong>Last Updated:</strong> December 2025</p>
+    </div>
+
+    <div class="contact-section">
+        <h2>📬 Contact Us</h2>
+        <p>Have questions about our privacy practices?</p>
+        
+        <div class="contact-grid">
+            <div class="contact-item">
+                <h4>📧 Support</h4>
+                <a href="mailto:inductionlabs1@gmail.com">inductionlabs1@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <h4>💡 Feature Requests</h4>
+                <a href="mailto:inductionlabs@gmail.com">inductionlabs@gmail.com</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>© 2025 <a href="index.html">Induction Labs</a>. All rights reserved.</p>
+    <p class="authors">Created by Praveen Ojha, Anshika Dixit, iLabs, WebcamFX</p>
+</footer>
+
+</body>
+</html>
