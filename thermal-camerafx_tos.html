@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Consent - Thermal Camera Fx</title>
+    <style>
+        /* Reusing Mobile-First Styling */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f7f6;
+            color: #333;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            text-align: left;
+        }
+
+        h1 {
+            color: #007bff;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+
+        .consent-text {
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .consent-item {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .btn {
+            flex-grow: 1;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #218838;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Privacy & Data Consent</h1>
+    
+    <div class="consent-text">
+        <p>
+            To continue using **Thermal Camera Fx**, we require your consent regarding the use of limited non-personal data for app performance and advertising.
+        </p>
+        
+        <p>
+            By clicking "Accept," you agree to the following uses:
+        </p>
+        
+        <ul>
+            <li class="consent-item">
+                1. Use of crash and performance data to maintain and improve app quality.
+            </li>
+            <li class="consent-item">
+                2. Use of non-personal data by advertising partners (AdMob) for personalized advertisements.
+            </li>
+        </ul>
+        
+        <p>
+            For full details on data collection and use, please review our <a href="[Link to Privacy Policy File]">Privacy Policy</a>.
+        </p>
+    </div>
+
+    <div class="button-group">
+        <button class="btn btn-secondary" onclick="window.location.href='[Link to Data Settings Screen]' || alert('Consent Refused. Please check app settings.');">
+            I Decline / Manage Options
+        </button>
+        <button class="btn btn-primary" onclick="alert('Consent Accepted. Thank you!');">
+            Accept & Continue
+        </button>
+    </div>
+
+</div>
+
+</body>
+</html>
