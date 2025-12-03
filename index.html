@@ -1,24 +1,332 @@
-<html>
-<style type="text/css" id="styleA">
-</style>
-<link type="text/css" rel="stylesheet" id="styleA">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policies - Induction Labs</title>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #0ea5e9;
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --border: #334155;
+            --success: #22c55e;
+            --gradient: linear-gradient(135deg, #6366f1 0%, #0ea5e9 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: var(--gradient);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .app-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 24px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--text-primary);
+            display: block;
+        }
+
+        .app-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
+        }
+
+        .app-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .app-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .app-card .arrow {
+            color: var(--primary);
+            margin-top: 12px;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .app-card:hover .arrow {
+            transform: translateX(5px);
+        }
+
+        .contact-section {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 40px;
+            margin-top: 50px;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            padding: 20px;
+            background: var(--bg-dark);
+            border-radius: 12px;
+        }
+
+        .contact-item h4 {
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .contact-item a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border);
+            margin-top: 50px;
+        }
+
+        .footer .authors {
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .apps-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-<pre>
-Privacy policy for <a href=animalvision.html>AnimalVision</a> 
-Privacy policy for <a href=bwcamera.html >bwcamera</a> 
-Privacy policy for <a href=cartooncamera.html>cartooncamera </a> 
-Privacy policy for <a href=gyrocamera.html>gyrocamera </a> 
-Privacy policy for <a href=nvcamera.html>nvcamera </a> 
-Privacy policy for <a href=pocketlens.html>pocketlens </a> 
-Privacy policy for <a href=silentcamera.html>silentcamera </a> 
-Privacy policy for <a href=sketch.html>sketch </a> 
-Privacy policy for <a href=thermal-camerafx.html>thermal-camerafx </a> 
-Privacy policy for <a href=VrNv.html>VrNv </a> 
-Privacy policy for <a href=zoom-camera.html>zoom-camera </a> 
-Privacy policy for <a href=VrTv.html>VrTv </a> 
-</pre>
- 
-</body></html>
+
+<header class="header">
+    <h1>🔒 Privacy Policies</h1>
+    <p>Induction Labs - Transparency & Trust</p>
+</header>
+
+<div class="container">
+    <div class="apps-grid">
+        <a href="animalvision.html" class="app-card">
+            <h3>🦁 Animal Vision</h3>
+            <p>See the world through animal eyes</p>
+            <span class="arrow">→</span>
+        </a>
+        
+        <a href="bwcamera.html" class="app-card">
+            <h3>📷 Black & White Camera</h3>
+            <p>Classic monochrome photography</p>
+            <span class="arrow">→</span>
+        </a>
+        
+        <a href="cartooncamera.html" class="app-card">
+            <h3>🎨 Cartoon Camera</h3>
+            <p>Transform photos into cartoons</p>
+            <span class="arrow">→</span>
+        </a>
+        
+        <a href="colorremedy.html" class="app-card">
+            <h3>🌈 Color Remedy</h3>
+            <p>Color blindness assistance tool</p>
+            <span class="arrow">→</span>
+        </a>
+        
+        <a href="gyrocamera.html" class="app-card">
+            <h3>🔄 Gyro Camera</h3>
+            <p>Gyroscope-stabilized camera</p>
+            <span class="arrow">→</span>
+        </a>
+        
+        <a href="LaserLevel.html" class="app-card">
+            <h3>📐 Laser Level</h3>
+            <p>Precision leveling tool</p>
+            <span class="arrow">→</span>
+        </a>
+        
+        <a href="nvcamera.html" class="app-card">
+            <h3>🌙 Night Vision Simulator</h3>
+            <p>Night vision camera effects</p>
+            <span class="arrow">→</span>
+        </a>
+        
+        <a href="pocketlens.html" class="app-card">
+            <h3>🔍 Pocket Lens / Magnifier</h3>
+            <p>Digital magnification tool</p>
+            <span class="arrow">→</span>
+        </a>
+        
+        <a href="RetroShooterVR.html" class="app-card">
+            <h3>🎮 Retro Shooter VR</h3>
+            <p>Classic VR gaming experience</p>
+            <span class="arrow">→</span>
+        </a>
+        
+        <a href="Santa.html" class="app-card">
+            <h3>🎅 Santa Ride</h3>
+            <p>Holiday fun game</p>
+            <span class="arrow">→</span>
+        </a>
+        
+        <a href="silentcamera.html" class="app-card">
+            <h3>🔇 Silent Camera</h3>
+            <p>Discreet photography</p>
+            <span class="arrow">→</span>
+        </a>
+        
+        <a href="sketch.html" class="app-card">
+            <h3>✏️ Sketch Camera</h3>
+            <p>Pencil sketch effects</p>
+            <span class="arrow">→</span>
+        </a>
+        
+        <a href="thermal-camerafx.html" class="app-card">
+            <h3>🔥 Thermal Camera FX</h3>
+            <p>Thermal vision simulation</p>
+            <span class="arrow">→</span>
+        </a>
+        
+        <a href="VrFilterCam.html" class="app-card">
+            <h3>🥽 VR Filter Cam</h3>
+            <p>VR camera filters</p>
+            <span class="arrow">→</span>
+        </a>
+        
+        <a href="VrLens.html" class="app-card">
+            <h3>👓 VR Lens</h3>
+            <p>Virtual reality lens effects</p>
+            <span class="arrow">→</span>
+        </a>
+        
+        <a href="VrNv.html" class="app-card">
+            <h3>🌃 VR Night Vision</h3>
+            <p>Night vision VR simulation</p>
+            <span class="arrow">→</span>
+        </a>
+        
+        <a href="VrThermoCam.html" class="app-card">
+            <h3>🌡️ VR Thermo Cam</h3>
+            <p>Thermal imaging in VR</p>
+            <span class="arrow">→</span>
+        </a>
+        
+        <a href="VrTubePlayer.html" class="app-card">
+            <h3>📺 VR Tube Player</h3>
+            <p>VR video player</p>
+            <span class="arrow">→</span>
+        </a>
+        
+        <a href="VrTv.html" class="app-card">
+            <h3>📡 VR TV</h3>
+            <p>Virtual reality TV experience</p>
+            <span class="arrow">→</span>
+        </a>
+        
+        <a href="Xmatch.html" class="app-card">
+            <h3>🎄 Christmas Match</h3>
+            <p>Holiday matching game</p>
+            <span class="arrow">→</span>
+        </a>
+        
+        <a href="zoom-camera.html" class="app-card">
+            <h3>🔭 Zoom Camera</h3>
+            <p>Super zoom photography</p>
+            <span class="arrow">→</span>
+        </a>
+    </div>
+
+    <div class="contact-section">
+        <h2>Contact Us</h2>
+        <p>We're here to help with any questions or concerns</p>
+        
+        <div class="contact-grid">
+            <div class="contact-item">
+                <h4>📧 Support</h4>
+                <a href="mailto:inductionlabs1@gmail.com">inductionlabs1@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <h4>💡 Feature Requests</h4>
+                <a href="mailto:inductionlabs@gmail.com">inductionlabs@gmail.com</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>© 2025 Induction Labs. All rights reserved.</p>
+    <p class="authors">Created by Praveen Ojha, Anshika Dixit, iLabs, WebcamFX</p>
+</footer>
+
+</body>
+</html>
